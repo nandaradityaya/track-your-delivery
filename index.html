@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--favicon-->
+    <link rel="icon" href="assets/images/index.ico" type="image/png" />
+    <!--plugins-->
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link
+      href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/metismenu/css/metisMenu.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css"
+      rel="stylesheet"
+    />
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet" />
+    <script src="assets/js/pace.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-extended.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" /> -->
+    <link href="assets/css/app.css" rel="stylesheet" />
+    <link href="assets/css/icons.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="assets/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <title>Design System</title>
+  </head>
+
+  <body class="bg-delivery">
+    <!--wrapper-->
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-lg bg-white nav-custom-index">
+        <div class="container-fluid">
+          <div class="sidebar-header">
+            <div>
+              <img
+                src="assets/images/logo_dct_2.png"
+                class="logo-icon"
+                alt="logo icon"
+              />
+            </div>
+            <div>
+              <h4 class="logo-text">Track Your Delivery</h4>
+            </div>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bx bx-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Cek Pengiriman</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kirim Barang</a>
+              </li>
+            </ul>
+            <form class="d-flex me-2">
+              <button
+                class="btn btn-outline-primary me-3 radius-8 px-3"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignIn"
+              >
+                Masuk
+              </button>
+              <button
+                class="btn btn-primary radius-8 px-3"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignUp"
+              >
+                Daftar
+              </button>
+            </form>
+            <!-- <div class="user-box dropdown">
+              <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/images/avatars/nanda.jpg" class="user-img" alt="user avatar">
+                <div class="user-info ps-3">
+                  <p class="user-name mb-0">Nanda Raditya</p>
+                  <p class="designattion mb-0">UI/UX Designer</p>
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+                </li>
+                <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Settings</span></a>
+                </li>
+                
+                  <div class="dropdown-divider mb-0"></div>
+                </li>
+                <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </nav>
+
+      <div
+        class="section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0"
+      >
+        <div class="container-fluid">
+          <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+            <div class="col mx-auto row justify-content-center">
+              <div class="search-container mb-3">
+                <div class="search-content">
+                  <img
+                    src="assets/images/icons/icon_point.svg"
+                    alt="Search Icon"
+                    class="me-2"
+                    width="30"
+                  />
+                  <div class="search-text">
+                    <h3>Cek Pengiriman</h3>
+
+                    <input
+                      type="text"
+                      id="inputField"
+                      placeholder="Masukan Kode Pengiriman"
+                    />
+                    <div id="chipContainer"></div>
+                  </div>
+                  <button class="search-button" id="searchButton">
+                    <img
+                      src="assets/images/icons/ic_search.svg"
+                      alt="Search Icon"
+                      class="search-icon"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <a
+                  href="cek-pengiriman.html"
+                  type="button"
+                  class="btn btn-primary btn-lacak radius-30"
+                >
+                  Lacak Pengiriman
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--end row-->
+        </div>
+      </div>
+
+      <!-- Modal Sign In -->
+      <div
+        class="modal fade"
+        id="modalSignIn"
+        tabindex="-1"
+        aria-labelledby="modalSignInLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content radius-15">
+            <div class="p-3">
+              <div class="d-flex justify-content-center">
+                <h5 class="modal-title text-center" id="modalSignInLabel">
+                  Masuk
+                </h5>
+              </div>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3">
+                <div class="col-12 mb-2">
+                  <input
+                    type="email"
+                    class="form-control floating-input"
+                    id="inputEmailAddress"
+                    placeholder="Masukan Email atau No HP Anda"
+                  />
+                </div>
+                <div class="col-12 mb-2">
+                  <div class="input-group" id="show_hide_password">
+                    <input
+                      type="password"
+                      class="form-control floating-input"
+                      id="inputChoosePassword"
+                      placeholder="Masukan Password Anda"
+                    />
+                    <a
+                      href="javascript:;"
+                      class="input-group-text bg-transparent border-end-0 border-top-0"
+                      ><i class="bx bx-hide"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check form-switch">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="flexSwitchCheckChecked"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexSwitchCheckChecked"
+                      >Ingat Saya</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6 text-end">
+                  <a
+                    type="button"
+                    class="text-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalResetPassword"
+                    >Lupa Kata Sandi ?</a
+                  >
+                </div>
+                <div class="col-12">
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary radius-30">
+                      Sign in
+                    </button>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <p>
+                    Belum Punya Akun?
+                    <a
+                      type="button"
+                      class="text-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalSignUp"
+                      >Daftar Sekarang</a
+                    >
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Sign Up -->
+      <div
+        class="modal fade"
+        id="modalSignUp"
+        tabindex="-1"
+        aria-labelledby="modalSignUpLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content radius-15">
+            <div class="p-3">
+              <div class="d-flex justify-content-center">
+                <h5 class="modal-title text-center" id="modalSignUpLabel">
+                  Daftar
+                </h5>
+              </div>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3">
+                <div class="col-12 mb-2">
+                  <input
+                    type="text"
+                    class="form-control floating-input"
+                    placeholder="Masukan Nama"
+                  />
+                </div>
+                <div class="col-12 mb-2">
+                  <input
+                    type="number"
+                    class="form-control floating-input"
+                    placeholder="Masukan No.KTP"
+                  />
+                </div>
+                <div class="col-12 mb-2">
+                  <input
+                    type="email"
+                    class="form-control floating-input"
+                    id="inputEmailAddress"
+                    placeholder="Masukan Email"
+                  />
+                </div>
+                <div class="col-12 mb-2">
+                  <input
+                    type="number"
+                    class="form-control floating-input"
+                    placeholder="Masukan No.Handphone"
+                  />
+                </div>
+                <div class="col-12 mb-2">
+                  <div class="input-group" id="show_hide_password">
+                    <input
+                      type="password"
+                      class="form-control floating-input"
+                      id="inputChoosePassword"
+                      placeholder="Masukan Password"
+                    />
+                    <a
+                      href="javascript:;"
+                      class="input-group-text bg-transparent border-end-0 border-top-0"
+                      ><i class="bx bx-hide"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-12 mb-2">
+                  <div class="input-group" id="show_hide_confirm_password">
+                    <input
+                      type="password"
+                      class="form-control floating-input"
+                      id="inputChoosePassword"
+                      placeholder="Konfirmasi Password"
+                    />
+                    <a
+                      href="javascript:;"
+                      class="input-group-text bg-transparent border-end-0 border-top-0"
+                      ><i class="bx bx-hide"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-grid">
+                    <button
+                      type="button"
+                      class="btn btn-primary radius-30"
+                      data-bs-target="#modalVerification"
+                      data-bs-toggle="modal"
+                    >
+                      Daftar
+                    </button>
+                  </div>
+                </div>
+                <div class="login-separater text-center mt-0">
+                  <span>Atau</span>
+                  <hr />
+                </div>
+                <div class="col-12">
+                  <div class="d-grid">
+                    <a
+                      class="btn shadow-sm btn-white radius-30 border-primary"
+                      href="javascript:;"
+                    >
+                      <span
+                        class="d-flex justify-content-center align-items-center"
+                      >
+                        <img
+                          class="me-2"
+                          src="assets/images/logo_dct_2.png"
+                          width="16"
+                          alt="Image Description"
+                        />
+                        <span class="text-primary">Masuk dengan DCT Web</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <p>
+                    Sudah Punya Akun?
+                    <a
+                      type="button"
+                      class="text-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalSignIn"
+                      >Masuk Sekarang</a
+                    >
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Verification -->
+      <div
+        class="modal fade"
+        id="modalVerification"
+        tabindex="-1"
+        aria-labelledby="modalVerificationLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content radius-15">
+            <div class="p-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <button
+                  class="btn btn-link-secondary p-0"
+                  data-bs-target="#modalSignUp"
+                  data-bs-toggle="modal"
+                >
+                  <i class="fadeIn animated bx bx-left-arrow-alt"></i>
+                </button>
+                <h5 class="modal-title text-center" id="modalVerificationLabel">
+                  Verifikasi
+                </h5>
+                <div style="width: 40px"></div>
+                <!-- Empty div to balance the layout -->
+              </div>
+            </div>
+            <div class="modal-body">
+              <p class="mb-3">
+                Kode Verifikasi akan dikirim ke whatsapp
+                <span class="text-primary">082124776437</span> dan ke email
+                <span class="text-primary">nandaraditya@advantagescm.com</span>
+              </p>
+              <div class="col-12">
+                <div class="d-grid">
+                  <button
+                    type="button"
+                    class="btn btn-primary radius-30"
+                    data-bs-target="#modalInputCodeVerification"
+                    data-bs-toggle="modal"
+                  >
+                    Kirim Kode Verifikasi
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Input Code Verification -->
+      <div
+        class="modal fade"
+        id="modalInputCodeVerification"
+        tabindex="-1"
+        aria-labelledby="modalInputCodeVerificationLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content radius-15">
+            <div class="p-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <button
+                  class="btn btn-link-secondary p-0"
+                  data-bs-target="#modalVerification"
+                  data-bs-toggle="modal"
+                >
+                  <i class="fadeIn animated bx bx-left-arrow-alt"></i>
+                </button>
+                <h5
+                  class="modal-title text-center"
+                  id="modalInputCodeVerificationLabel"
+                >
+                  Verifikasi
+                </h5>
+                <div style="width: 40px"></div>
+                <!-- Empty div to balance the layout -->
+              </div>
+            </div>
+            <div class="modal-body">
+              <p class="mb-3">
+                Kode Verifikasi telah dikirim ke whatsapp
+                <span class="text-primary">082124776437</span> dan ke email
+                <span class="text-primary">nandaraditya@advantagescm.com</span>
+              </p>
+              <div class="verification-input">
+                <input
+                  type="text"
+                  maxlength="1"
+                  id="input1"
+                  oninput="moveToNext(this, 'input2')"
+                  onkeydown="moveToBack(event, 'input1', 'input1')"
+                />
+                <input
+                  type="text"
+                  maxlength="1"
+                  id="input2"
+                  oninput="moveToNext(this, 'input3')"
+                  onkeydown="moveToBack(event, 'input1', 'input2')"
+                />
+                <input
+                  type="text"
+                  maxlength="1"
+                  id="input3"
+                  oninput="moveToNext(this, 'input4')"
+                  onkeydown="moveToBack(event, 'input2', 'input3')"
+                />
+                <input
+                  type="text"
+                  maxlength="1"
+                  id="input4"
+                  oninput="moveToNext(this, 'input5')"
+                  onkeydown="moveToBack(event, 'input3', 'input4')"
+                />
+                <input
+                  type="text"
+                  maxlength="1"
+                  id="input5"
+                  oninput="moveToNext(this, 'input6')"
+                  onkeydown="moveToBack(event, 'input4', 'input5')"
+                />
+                <input
+                  type="text"
+                  maxlength="1"
+                  id="input6"
+                  onkeydown="moveToBack(event, 'input5', 'input6')"
+                />
+              </div>
+              <p class="mt-3 text-center">
+                Kirim Ulang Kode dalam <strong id="countdown">10:00</strong>
+              </p>
+
+              <!-- SHOW THIS IF COUNTDOWN IS DONE -->
+              <div class="text-center">
+                <a href="#" class="btn-link">Kirim Ulang Kode</a>
+              </div>
+              <!-- END -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Reset Password -->
+      <div
+        class="modal fade"
+        id="modalResetPassword"
+        tabindex="-1"
+        aria-labelledby="modalResetPasswordLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content radius-15">
+            <div class="p-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <button
+                  class="btn btn-link-secondary p-0"
+                  data-bs-target="#modalSignIn"
+                  data-bs-toggle="modal"
+                >
+                  <i class="fadeIn animated bx bx-left-arrow-alt"></i>
+                </button>
+                <h5
+                  class="modal-title text-center"
+                  id="modalResetPasswordLabel"
+                >
+                  Mengatur Ulang Kata Sandi
+                </h5>
+                <div style="width: 40px"></div>
+                <!-- Empty div to balance the layout -->
+              </div>
+            </div>
+            <div class="modal-body">
+              <p class="mb-3 text-center">
+                OTP akan dikirim ke Email dan Whatsapp anda
+              </p>
+              <div class="col-12 mb-3">
+                <input
+                  type="email"
+                  class="form-control floating-input"
+                  id="inputEmailAddress"
+                  placeholder="Masukan Email atau No HP Anda"
+                />
+              </div>
+              <div class="col-12">
+                <div class="d-grid">
+                  <button
+                    type="button"
+                    class="btn btn-primary radius-30"
+                    data-bs-target="#modalResetConfirmPassword"
+                    data-bs-toggle="modal"
+                  >
+                    Kirim
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Reset Confirm Password -->
+      <div
+        class="modal fade"
+        id="modalResetConfirmPassword"
+        tabindex="-1"
+        aria-labelledby="modalResetConfirmPasswordLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content radius-15">
+            <div class="p-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <button
+                  class="btn btn-link-secondary p-0"
+                  data-bs-target="#modalResetConfirmPassword"
+                  data-bs-toggle="modal"
+                >
+                  <i class="fadeIn animated bx bx-left-arrow-alt"></i>
+                </button>
+                <h5
+                  class="modal-title text-center"
+                  id="modalResetConfirmPasswordLabel"
+                >
+                  Mengatur Ulang Kata Sandi
+                </h5>
+                <div style="width: 40px"></div>
+                <!-- Empty div to balance the layout -->
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="col-12 mb-4">
+                <div class="input-group" id="show_hide_password">
+                  <input
+                    type="password"
+                    class="form-control floating-input"
+                    id="inputChoosePassword"
+                    placeholder="Masukan Password"
+                  />
+                  <a
+                    href="javascript:;"
+                    class="input-group-text bg-transparent border-end-0 border-top-0"
+                    ><i class="bx bx-hide"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="col-12 mb-4">
+                <div class="input-group" id="show_hide_confirm_password">
+                  <input
+                    type="password"
+                    class="form-control floating-input"
+                    id="inputChoosePassword"
+                    placeholder="Konfirmasi Password"
+                  />
+                  <a
+                    href="javascript:;"
+                    class="input-group-text bg-transparent border-end-0 border-top-0"
+                    ><i class="bx bx-hide"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="d-grid">
+                  <button
+                    type="button"
+                    class="btn btn-primary radius-30"
+                    data-bs-target="#modalResetConfirmPassword"
+                    data-bs-toggle="modal"
+                  >
+                    Ubah Password
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--start overlay-->
+      <div class="overlay toggle-icon"></div>
+      <!--end overlay-->
+      <!--Start Back To Top Button-->
+      <a href="javaScript:;" class="back-to-top"
+        ><i class="bx bxs-up-arrow-alt"></i
+      ></a>
+      <!--End Back To Top Button-->
+
+      <footer class="page-footer">
+        <p class="mb-0">Copyright © 2024. All right reserved.</p>
+      </footer>
+    </div>
+    <!--end wrapper-->
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--plugins-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+    <script src="assets/plugins/fullcalendar/js/main.min.js"></script>
+    <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+
+    <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+
+    <!--app JS-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
