@@ -51,7 +51,7 @@
   <body>
     <!--wrapper-->
     <div class="wrapper">
-      <nav class="navbar navbar-expand-lg bg-white nav-custom-index">
+      <nav class="navbar navbar-expand-lg bg-white">
         <div class="container-fluid">
           <div class="sidebar-header">
             <div>
@@ -130,32 +130,109 @@
       </nav>
 
       <div
-        class="section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0"
+        class="section-authentication-signin d-flex align-items-center justify-content-center"
       >
         <div class="container-fluid">
           <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
             <div class="col mx-auto row justify-content-center">
               <h2 class="text-center font-weight-bold">Cek Pengiriman</h2>
               <p class="font-18 text-center">Masukan Kode Pengirimanmu</p>
-              <div class="search-cek-pengiriman">
-                <div class="chip-container" id="chipContainer">
-                  <textarea
-                    id="inputField"
-                    placeholder="Ketik Resi"
-                    rows="1"
-                    class="bg-white"
-                  ></textarea>
-                </div>
-                <button class="search-button" id="searchButton">
-                  <img
-                    src="assets/images/icons/ic_search.svg"
-                    alt="Search Icon"
-                    class="search-icon"
-                  />
-                </button>
-              </div>
-              <p>Tersedia sampai dengan 10 resi</p>
+              <div class="search-cek-pengiriman mb-3">
+                <div class="search-content">
               
+                  <div class="search-text">
+
+                    <input
+                      type="text"
+                      id="inputField"
+                      placeholder="Masukan Kode Pengiriman"
+                    />
+                    
+                  </div>
+                  <button class="search-button" id="searchButton">
+                    <img
+                      src="assets/images/icons/ic_search.svg"
+                      alt="Search Icon"
+                      class="search-icon"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div id="chipContainer">
+                <div class="chip">
+                  423421543534543
+                  <span class="closebtn" onclick="this.parentElement.style.display='none'">×</span>
+                </div>
+              </div>
+              <p class="mt-3">Tersedia sampai dengan 10 resi</p>
+              <div class="d-flex justify-content-center mb-5">
+                <a
+                  href="cek-pengiriman.html"
+                  type="button"
+                  class="btn btn-primary btn-lacak radius-30"
+                >
+                  Lacak Pengiriman
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          
+          <div class="container">
+            <div class="card radius-10">
+              <div class="card-body">
+      
+                <div class="table-responsive">
+                  <table id="tableMenuMaster" class="table mb-0 align-middle" style="width:100%">
+                    <thead class="table-light">
+                      <tr>
+                        <th>No</th>
+                        <th>Kode Pengiriman</th>
+                        <th>Status</th>
+                        <th>Pengirim</th>
+                        <th>Tanggal Kirim</th>
+                        <th>Penerima</th>
+                        <th>Tanggal Penerima</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>TYD12371231232132</td>
+                        <td>Diterima Perantara (Iqbal Feriansyah)</td>
+                        <td>Robby Aditama</td>
+                        <td>18 Feb 2024 12:52</td>
+                        <td>Jovian Ayasa</td>
+                        <td>-</td>
+                        <td>
+                          <div class="d-flex order-actions">
+                            <a href="pengiriman-detail.html" type="button" class="text-primary bg-light-primary border-0 me-3">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye text-primary"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>TYD31231231231232</td>
+                        <td>Diterima Penerima Akhir (Ibnu Assyahri)</td>
+                        <td>Robby Aditama</td>
+                        <td>18 Feb 2024 12:52</td>
+                        <td>Ibnu Assyahri</td>
+                        <td>20 Feb 2024 12:52</td>
+                        <td>
+                          <div class="d-flex order-actions">
+                            <a href="pengiriman-detail.html" type="button" class="text-primary bg-light-primary border-0 me-3">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye text-primary"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
           <!--end row-->
