@@ -4009,6 +4009,10 @@ input::placeholder {
   font-weight: 500;
 }
 
+.font-weight-extra-bold {
+  font-weight: 600;
+}
+
 .list-style-none {
   list-style-type: none;
 }

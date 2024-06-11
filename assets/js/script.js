@@ -129,3 +129,36 @@ $(document).ready(function () {
 });
 
 // ----------- END INPUT VERIFICATION ------------- //
+
+// ----------- DATE PICKER ------------- //
+
+$(document).ready(function () {
+  $("#startDatePengiriman").datepicker({
+    uiLibrary: "bootstrap4",
+    icons: {
+      rightIcon: '<img src="assets/images/icons/calendar-days.svg" />',
+    },
+  });
+
+  $("#endDatePengiriman").datepicker({
+    uiLibrary: "bootstrap4",
+    icons: {
+      rightIcon: '<img src="assets/images/icons/calendar-days.svg" />',
+    },
+  });
+});
+
+// ----------- END DATE PICKER ------------- //
+
+// ----------- SELECT 2 ------------- //
+$(".single-select").select2({
+  theme: "bootstrap4",
+  width: $(this).data("width")
+    ? $(this).data("width")
+    : $(this).hasClass("w-100")
+    ? "100%"
+    : "style",
+  placeholder: $(this).data("placeholder"),
+  allowClear: Boolean($(this).data("allow-clear")),
+});
+// ----------- END SELECT 2 ------------- //

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--favicon-->
+    <link rel="icon" href="assets/images/index.ico" type="image/png" />
+    <!--plugins-->
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link
+      href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/metismenu/css/metisMenu.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libraries/gijgo/css/gijgo.min.css" />
+    <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link
+      href="assets/plugins/select2/css/select2-bootstrap4.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css"
+      rel="stylesheet"
+    />
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet" />
+    <script src="assets/js/pace.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-extended.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" /> -->
+    <link href="assets/css/app.css" rel="stylesheet" />
+    <link href="assets/css/icons.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="assets/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+
+    <title>Track Your Delivery</title>
+  </head>
+
+  <body>
+    <!--wrapper-->
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+          <div class="sidebar-header">
+            <div>
+              <img
+                src="assets/images/logo_dct_2.png"
+                class="logo-icon"
+                alt="logo icon"
+              />
+            </div>
+            <div>
+              <h4 class="logo-text">Track Your Delivery</h4>
+            </div>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bx bx-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#"
+                  >Cek Pengiriman</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kirim Barang</a>
+              </li>
+            </ul>
+            <!-- <form class="d-flex me-2">
+              <button
+                class="btn btn-outline-primary me-3 radius-8 px-3"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignIn"
+              >
+                Masuk
+              </button>
+              <button
+                class="btn btn-primary radius-8 px-3"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignUp"
+              >
+                Daftar
+              </button>
+            </form> -->
+            <div class="user-box dropdown">
+              <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/images/avatars/nanda.jpg" class="user-img" alt="user avatar">
+                <div class="user-info ps-3">
+                  <p class="user-name mb-0">Nanda Raditya</p>
+                  <p class="designattion mb-0">UI/UX Designer</p>
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+                </li>
+                <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Settings</span></a>
+                </li>
+                
+                  <div class="dropdown-divider mb-0"></div>
+                </li>
+                <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      
+      <div class="p-4">
+        
+  
+        <div class="card">
+          <div class="card-body">
+            <h5 class="text-center text-primary mb-3">
+              Konfirmasi Terima Barang (TYD12371231232132)
+            </h5>
+            
+            <div class="card radius-10 mb-4">
+              
+              <div class="card-body">
+                <h6
+                  class="text-black mb-2"
+                >
+                  List Barang
+                </h6>
+                <div class="table-responsive">
+                  <br />
+                  <table
+                    id="tableListBarang"
+                    class="table mb-0 align-middle"
+                    style="width: 100%"
+                  >
+                    <thead class="table-light">
+                      <tr>
+                        <th>No</th>
+                        <th>Nama Barang</th>
+                        <th>Jumlah Barang</th>
+                        <th>Serial Number</th>
+                        <th>Deskripsi Barang</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Laptop</td>
+                        <td>3</td>
+                        <td>ADV12321, ADV32132</td>
+                        <td>3 buah laptop tanpa charger</td>
+                        <td>
+                          <a
+                            type="button"
+                            class="btn btn-primary btn-sm radius-30 px-4"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetailPhoto"
+                            >Lihat Foto</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Mouse</td>
+                        <td>5</td>
+                        <td>-</td>
+                        <td>Barang Rusak</td>
+                        <td>
+                          <a
+                            type="button"
+                            class="btn btn-primary btn-sm radius-30 px-4"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetailPhoto"
+                            >Lihat Foto</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Keyboard</td>
+                        <td>5</td>
+                        <td>-</td>
+                        <td>Barang Rusak</td>
+                        <td>
+                          <a
+                            type="button"
+                            class="btn btn-primary btn-sm radius-30 px-4"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetailPhoto"
+                            >Lihat Foto</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Monitor</td>
+                        <td>5</td>
+                        <td>-</td>
+                        <td>Barang Rusak</td>
+                        <td>
+                          <a
+                            type="button"
+                            class="btn btn-primary btn-sm radius-30 px-4"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetailPhoto"
+                            >Lihat Foto</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>CPU</td>
+                        <td>1</td>
+                        <td>-</td>
+                        <td>Barang Rusak</td>
+                        <td>
+                          <a
+                            type="button"
+                            class="btn btn-primary btn-sm radius-30 px-4"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetailPhoto"
+                            >Lihat Foto</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card radius-10 mb-4">
+              
+              <div class="card-body">
+                <h6 class="text-black mb-2">
+                  List Penerima
+                </h6>
+                <div class="table-responsive">
+                  <br>
+                  <table id="tableListPenerima" class="table mb-0 align-middle" style="width:100%">
+                    <thead class="table-light">
+                      <tr>
+                        <th>No</th>
+                        <th>Nama Penerima</th>
+                        <th>Nomor HP</th>
+                        <th>Tanggal Terima</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Ahmad</td>
+                        <td>0838776182999</td>
+                        <td>17 Feb 2024 18:30</td>
+                        <td><a type="button" class="btn btn-primary btn-sm radius-30 px-4" data-bs-toggle="modal" data-bs-target="#modalDetailPenerima">Lihat Foto</a></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Diva</td>
+                        <td>0838776182999</td>
+                        <td>17 Feb 2024 19:30</td>
+                        <td><a type="button" class="btn btn-primary btn-sm radius-30 px-4" data-bs-toggle="modal" data-bs-target="#modalDetailPenerima">Lihat Foto</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card radous-10">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12 col-lg-4 mb-3">
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Foto Bukti Konfirmasi Terima Barang</label>
+                      <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div>
+                      <textarea class="form-control" id="keteranganBarang" placeholder="Keterangan Barang..." rows="3"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 mb-3">
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Foto Bukti Konfirmasi Terima Barang</label>
+                      <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div>
+                      <textarea class="form-control" id="keteranganBarang" placeholder="Keterangan Barang..." rows="3"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 mb-3">
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Foto Bukti Konfirmasi Terima Barang</label>
+                      <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div>
+                      <textarea class="form-control" id="keteranganBarang" placeholder="Keterangan Barang..." rows="3"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 mb-3">
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Foto Bukti Konfirmasi Terima Barang</label>
+                      <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div>
+                      <textarea class="form-control" id="keteranganBarang" placeholder="Keterangan Barang..." rows="3"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 mb-3">
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Foto Bukti Konfirmasi Terima Barang</label>
+                      <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div>
+                      <textarea class="form-control" id="keteranganBarang" placeholder="Keterangan Barang..." rows="3"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4 mb-3">
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Foto Bukti Konfirmasi Terima Barang</label>
+                      <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div>
+                      <textarea class="form-control" id="keteranganBarang" placeholder="Keterangan Barang..." rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mb-5">
+          <button id="btnSimpanTembusan" type="button" class="btn btn-primary d-flex align-items-center radius-8 px-4"><i class="bx bx-check me-1"></i>Konfirmasi Terima</button>
+        </div>
+      </div>
+      <!--start overlay-->
+      <div class="overlay toggle-icon"></div>
+      <!--end overlay-->
+      <!--Start Back To Top Button-->
+      <a href="javaScript:;" class="back-to-top"
+        ><i class="bx bxs-up-arrow-alt"></i
+      ></a>
+      <!--End Back To Top Button-->
+
+      <footer class="page-footer bg-white text-black">
+        <p class="mb-0">Copyright © 2024. All right reserved.</p>
+      </footer>
+    </div>
+    <!--end wrapper-->
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--plugins-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+    <script src="assets/plugins/fullcalendar/js/main.min.js"></script>
+    <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+    <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+
+    <!--app JS-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+       $(document).ready(function () {
+        var table = $('#tableListPenerima').DataTable({
+        });
+      });
+
+      $(document).ready(function () {
+        var table = $('#tableListBarang').DataTable({
+        });
+      });
+    </script>
+  </body>
+</html>

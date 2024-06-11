@@ -38,14 +38,8 @@
       rel="stylesheet"
       href="assets/font-awesome/4.5.0/css/font-awesome.min.css"
     />
-    <style>
-      .chip {
-        display: inline-flex;
-        align-items: center;
-        margin: 5px 5px;
-      }
-    </style>
-    <title>Design System</title>
+
+    <title>Track Your Delivery</title>
   </head>
 
   <body>
@@ -183,7 +177,7 @@
               <div class="card-body">
       
                 <div class="table-responsive">
-                  <table id="tableMenuMaster" class="table mb-0 align-middle" style="width:100%">
+                  <table id="tableCekPengiriman" class="table mb-0 align-middle" style="width:100%">
                     <thead class="table-light">
                       <tr>
                         <th>No</th>
@@ -766,47 +760,10 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-  const inputField = document.getElementById("inputField");
-  const chipContainer = document.getElementById("chipContainer");
-  const searchButton = document.getElementById("searchButton");
-
-  inputField.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-      event.preventDefault(); // Prevent form submission
-      addChip();
-    }
-  });
-
-  searchButton.addEventListener("click", function() {
-    addChip();
-  });
-
-  function addChip() {
-    const inputValue = inputField.value.trim();
-    if (inputValue !== "" && chipContainer.childElementCount < 10) {
-      createChip(inputValue);
-      inputField.value = ""; // Clear the input field
-    }
-  }
-
-  function createChip(value) {
-    const chip = document.createElement("div");
-    chip.classList.add("chip");
-    chip.innerText = value;
-
-    const closeBtn = document.createElement("span");
-    closeBtn.classList.add("closebtn");
-    closeBtn.innerHTML = "&times;";
-    closeBtn.onclick = function() {
-      chip.remove();
-    };
-
-    chip.appendChild(closeBtn);
-    chipContainer.insertBefore(chip, inputField);
-  }
-});
-
+      $(document).ready(function () {
+        var table = $("#tableCekPengiriman").DataTable({});
+      });
     </script>
+
   </body>
 </html>

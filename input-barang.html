@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--favicon-->
+    <link rel="icon" href="assets/images/index.ico" type="image/png" />
+    <!--plugins-->
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link
+      href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/metismenu/css/metisMenu.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css"
+      rel="stylesheet"
+    />
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet" />
+    <script src="assets/js/pace.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-extended.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" /> -->
+    <link href="assets/css/app.css" rel="stylesheet" />
+    <link href="assets/css/icons.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="assets/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+
+    <title>Track Your Delivery</title>
+  </head>
+
+  <body>
+    <!--wrapper-->
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+          <div class="sidebar-header">
+            <div>
+              <img
+                src="assets/images/logo_dct_2.png"
+                class="logo-icon"
+                alt="logo icon"
+              />
+            </div>
+            <div>
+              <h4 class="logo-text">Track Your Delivery</h4>
+            </div>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bx bx-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Cek Pengiriman</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kirim Barang</a>
+              </li>
+            </ul>
+            <!-- <form class="d-flex me-2">
+              <button
+                class="btn btn-outline-primary me-3 radius-8 px-3"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignIn"
+              >
+                Masuk
+              </button>
+              <button
+                class="btn btn-primary radius-8 px-3"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignUp"
+              >
+                Daftar
+              </button>
+            </form> -->
+            <div class="user-box dropdown">
+              <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/images/avatars/nanda.jpg" class="user-img" alt="user avatar">
+                <div class="user-info ps-3">
+                  <p class="user-name mb-0">Nanda Raditya</p>
+                  <p class="designattion mb-0">UI/UX Designer</p>
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+                </li>
+                <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Settings</span></a>
+                </li>
+                
+                  <div class="dropdown-divider mb-0"></div>
+                </li>
+                <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="p-4">
+        <!--breadcrumb-->
+				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+					<div class="breadcrumb-title pe-3">Kirim Barang</div>
+					<div class="ps-3">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0 p-0">
+							  <li class="breadcrumb-item"><a href=""><i class="bx bx-home-alt"></i></a>
+							  </li>
+							  <li class="breadcrumb-item active" aria-current="page">Detail Barang</li>
+							</ol>
+						  </nav>
+					</div>
+				</div>
+				<!--end breadcrumb-->
+
+        <div class="card radius-10">
+          <div class="card-body">
+            <h5 class="text-black text-center mb-4">Detail Barang</h5>
+            <div class="row">
+              <div class="col-12 col-lg-4 mb-3">
+                <label for="namaBarang" class="form-label">Nama Barang</label>
+                <input type="text" class="form-control" id="namaBarang" placeholder="Masukan Nama Barang...">
+              </div>
+              <div class="col-12 col-lg-4 mb-3">
+                  <label for="jumlahBarang" class="form-label">Jumlah Barang</label>
+                  <input type="number" class="form-control" id="jumlahBarang" placeholder="Masukan Jumlah Barang...">
+              </div>
+              <div class="col-12 col-lg-4 mb-3">
+                  <label for="serialNumber" class="form-label">Serial Number</label>
+                  <input type="number" class="form-control" id="serialNumber" placeholder="Masukan Serial Number...">
+              </div>
+              <div class="col-12 col-lg-12 mb-3">
+                  <label for="deskripsiBarang" class="form-label">Deskripsi Barang</label>
+                  <textarea class="form-control" id="deskripsiBarang" placeholder="Masukan Deskripsi..." rows="3"></textarea>
+              </div>
+
+              <div class="col-12 col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Foto Barang</label>
+                      <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div>
+                      <textarea class="form-control" id="keteranganBarang" placeholder="Keterangan Barang..." rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Foto Barang</label>
+                      <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div>
+                      <textarea class="form-control" id="keteranganBarang" placeholder="Keterangan Barang..." rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Foto Barang</label>
+                      <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div>
+                      <textarea class="form-control" id="keteranganBarang" placeholder="Keterangan Barang..." rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center mb-4">
+              <button id="btnSimpanBarang" type="button" class="btn btn-primary d-flex align-items-center radius-8">Simpan</button>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <br>
+                  <table id="tableListBarang" class="table mb-0 align-middle" style="width:100%">
+                      <thead class="table-light">
+                          <tr>
+                              <th>No</th>
+                              <th>Nama Barang</th>
+                              <th>Jumlah Barang</th>
+                              <th>Serial Number</th>
+                              <th>Deskripsi Barang</th>
+                              <th>Aksi</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>1</td>
+                              <td>Laptop</td>
+                              <td>3</td>
+                              <td>ADV12321, ADV32132</td>
+                              <td>3 buah laptop tanpa charger</td>
+                              <td>
+                                  <div class="d-flex order-actions gap-2">
+                                      <a type="button" class="text-primary bg-light-primary border-0" data-bs-toggle="modal" data-bs-target="#modalEditBarang"><i class="bx bxs-edit"></i></a>
+                                      <a type="button" class="text-danger bg-light-danger border-0 delete-row"><i class="bx bxs-trash"></i></a>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="card radius-10">
+          <div class="card-body">
+            <h5 class="text-black text-center mb-4">Detail Penerima</h5>
+            <div class="row">
+              <div class="col-12 col-lg-6 mb-3">
+                <label for="namaPenerima" class="form-label">Nama Penerima</label>
+                <input type="text" class="form-control" id="namaPenerima" placeholder="Masukan Nama Penerima...">
+              </div>
+              <div class="col-12 col-lg-6 mb-3">
+                  <label for="noHP" class="form-label">Nomor HP (Whatsapp)</label>
+                  <input type="number" class="form-control" id="noHP" placeholder="Masukan Nomor HP...">
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center mb-4">
+              <button id="btnSimpanPenerima" type="button" class="btn btn-primary d-flex align-items-center radius-8">Simpan</button>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive">
+                    <br>
+                    <table id="tableListPenerima" class="table mb-0 align-middle" style="width:100%">
+                        <thead class="table-light">
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Penerima</th>
+                                <th>Nomor HP</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Agus Waluyo</td>
+                                <td>0838776182999</td>
+                                <td>
+                                    <div class="d-flex order-actions gap-2">
+                                        <a type="button" class="text-danger bg-light-danger border-0 delete-row"><i class="bx bxs-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="card radius-10">
+          <div class="card-body">
+            <h5 class="text-black text-center mb-4">Detail Tembusan</h5>
+            <div class="row">
+              <div class="col-12 col-lg-6 mb-3">
+                <label for="namaTembusan" class="form-label">Nama Tembusan</label>
+                <input type="text" class="form-control" id="namaTembusan" placeholder="Masukan Nama Tembusan...">
+              </div>
+              <div class="col-12 col-lg-6 mb-3">
+                  <label for="noHPTembusan" class="form-label">Nomor HP (Whatsapp)</label>
+                  <input type="number" class="form-control" id="noHPTembusan" placeholder="Masukan Nomor HP...">
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center mb-4">
+              <button id="btnSimpanTembusan" type="button" class="btn btn-primary d-flex align-items-center radius-8">Simpan</button>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive">
+                    <br>
+                    <table id="tableListTembusan" class="table mb-0 align-middle" style="width:100%">
+                        <thead class="table-light">
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Penerima</th>
+                                <th>Nomor HP</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Agus Waluyo</td>
+                                <td>0838776182999</td>
+                                <td>
+                                    <div class="d-flex order-actions gap-2">
+                                        <a type="button" class="text-danger bg-light-danger border-0 delete-row"><i class="bx bxs-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mb-5">
+          <button id="btnSimpanTembusan" type="button" class="btn btn-primary d-flex align-items-center radius-8 px-4"><i class="bx bx-check me-1"></i>Simpan Pengiriman</button>
+        </div>
+      </div>
+
+      
+
+      
+      <!-- Modal Edit -->
+      <div
+      class="modal fade"
+      id="modalEditBarang"
+      tabindex="-1"
+      aria-labelledby="modalEditBarangLabel"
+      aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content radius-15">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalEditBarang">
+                Edit Detail Barang
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-12 col-lg-4 mb-3">
+                  <label for="namaBarang" class="form-label">Nama Barang</label>
+                  <input type="text" class="form-control" id="namaBarang" placeholder="Masukan Nama Barang...">
+                </div>
+                <div class="col-12 col-lg-4 mb-3">
+                    <label for="jumlahBarang" class="form-label">Jumlah Barang</label>
+                    <input type="number" class="form-control" id="jumlahBarang" placeholder="Masukan Jumlah Barang...">
+                </div>
+                <div class="col-12 col-lg-4 mb-3">
+                    <label for="serialNumber" class="form-label">Serial Number</label>
+                    <input type="number" class="form-control" id="serialNumber" placeholder="Masukan Serial Number...">
+                </div>
+                <div class="col-12 col-lg-12 mb-3">
+                    <label for="deskripsiBarang" class="form-label">Deskripsi Barang</label>
+                    <textarea class="form-control" id="deskripsiBarang" placeholder="Masukan Deskripsi..." rows="3"></textarea>
+                </div>
+  
+                <div class="col-12 col-lg-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label for="formFile" class="form-label">Foto Barang</label>
+                        <input class="form-control" type="file" id="formFile">
+                      </div>
+                      <div>
+                        <textarea class="form-control" id="keteranganBarang" placeholder="Keterangan Barang..." rows="3"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-12 col-lg-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label for="formFile" class="form-label">Foto Barang</label>
+                        <input class="form-control" type="file" id="formFile">
+                      </div>
+                      <div>
+                        <textarea class="form-control" id="keteranganBarang" placeholder="Keterangan Barang..." rows="3"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-12 col-lg-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label for="formFile" class="form-label">Foto Barang</label>
+                        <input class="form-control" type="file" id="formFile">
+                      </div>
+                      <div>
+                        <textarea class="form-control" id="keteranganBarang" placeholder="Keterangan Barang..." rows="3"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary radius-8"
+                data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary radius-8">Simpan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--start overlay-->
+      <div class="overlay toggle-icon"></div>
+      <!--end overlay-->
+      <!--Start Back To Top Button-->
+      <a href="javaScript:;" class="back-to-top"
+        ><i class="bx bxs-up-arrow-alt"></i
+      ></a>
+      <!--End Back To Top Button-->
+
+      <footer class="page-footer bg-white text-black">
+        <p class="mb-0">Copyright © 2024. All right reserved.</p>
+      </footer>
+    </div>
+    <!--end wrapper-->
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--plugins-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+    <script src="assets/plugins/fullcalendar/js/main.min.js"></script>
+    <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+
+    <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+
+    <!--app JS-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+
+      $(document).ready(function () {
+        var table = $('#tableListBarang').DataTable({
+          dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
+          // dom: 'Bfrtip',
+          buttons: ['copy', 'csv','excel', 'pdf'
+          ],
+        });
+
+        table.buttons().container()
+          .appendTo('#tableUser_wrapper .col-md-6:eq(0)');
+      });
+
+      $(document).ready(function () {
+        var table = $('#tableListPenerima').DataTable({
+        });
+      });
+
+      $(document).ready(function () {
+        var table = $('#tableListTembusan').DataTable({
+        });
+      });
+
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const buttonSimpan = document.querySelector("#btnSimpanBarang");
+          const tableListBarang = document.getElementById("tableListBarang").querySelector("tbody");
+
+          buttonSimpan.addEventListener("click", function () {
+              const namaBarang = document.getElementById("namaBarang").value.trim();
+              const jumlahBarang = document.getElementById("jumlahBarang").value.trim();
+              const serialNumber = document.getElementById("serialNumber").value.trim();
+              const deskripsiBarang = document.getElementById("deskripsiBarang").value.trim();
+
+              if (namaBarang && jumlahBarang && serialNumber && deskripsiBarang) {
+                  const rowCount = tableListBarang.rows.length;
+                  const newRow = tableListBarang.insertRow(rowCount);
+
+                  const cellNo = newRow.insertCell(0);
+                  const cellNamaBarang = newRow.insertCell(1);
+                  const cellJumlahBarang = newRow.insertCell(2);
+                  const cellSerialNumber = newRow.insertCell(3);
+                  const cellDeskripsiBarang = newRow.insertCell(4);
+                  const cellAksi = newRow.insertCell(5);
+
+                  cellNo.textContent = rowCount + 1;
+                  cellNamaBarang.textContent = namaBarang;
+                  cellJumlahBarang.textContent = jumlahBarang;
+                  cellSerialNumber.textContent = serialNumber;
+                  cellDeskripsiBarang.textContent = deskripsiBarang;
+                  cellAksi.innerHTML = `
+                      <div class="d-flex order-actions gap-2">
+                          <a type="button" class="text-primary bg-light-primary border-0" data-bs-toggle="modal" data-bs-target="#modalEditBarang"><i class="bx bxs-edit"></i></a>
+                          <a type="button" class="text-danger bg-light-danger border-0 delete-row"><i class="bx bxs-trash"></i></a>
+                      </div>
+                  `;
+
+                  // Clear form inputs after saving
+                  document.getElementById("namaBarang").value = "";
+                  document.getElementById("jumlahBarang").value = "";
+                  document.getElementById("serialNumber").value = "";
+                  document.getElementById("deskripsiBarang").value = "";
+
+                  // Add event listener to delete button
+                  newRow.querySelector(".delete-row").addEventListener("click", function () {
+                      tableListBarang.deleteRow(newRow.rowIndex - 1);
+                      updateRowNumbers();
+                  });
+              } else {
+                  alert("Semua field harus diisi!");
+              }
+          });
+
+          function updateRowNumbers() {
+              const rows = tableListBarang.rows;
+              for (let i = 0; i < rows.length; i++) {
+                  rows[i].cells[0].textContent = i + 1;
+              }
+          }
+
+          // Attach delete event to existing rows
+          const deleteButtons = document.querySelectorAll(".delete-row");
+          deleteButtons.forEach(button => {
+              button.addEventListener("click", function () {
+                  const row = button.closest("tr");
+                  tableListBarang.deleteRow(row.rowIndex - 1);
+                  updateRowNumbers();
+              });
+          });
+      });
+    </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttonSimpanPenerima = document.getElementById("btnSimpanPenerima");
+      const tableListPenerima = document
+        .getElementById("tableListPenerima")
+        .querySelector("tbody");
+
+      buttonSimpanPenerima.addEventListener("click", function () {
+        const namaPenerima = document.getElementById("namaPenerima").value.trim();
+        const noHP = document.getElementById("noHP").value.trim();
+
+        if (namaPenerima && noHP) {
+          const rowCount = tableListPenerima.rows.length;
+          const newRow = tableListPenerima.insertRow(rowCount);
+
+          const cellNo = newRow.insertCell(0);
+          const cellNamaPenerima = newRow.insertCell(1);
+          const cellNoHP = newRow.insertCell(2);
+          const cellAksi = newRow.insertCell(3);
+
+          cellNo.textContent = rowCount + 1;
+          cellNamaPenerima.textContent = namaPenerima;
+          cellNoHP.textContent = noHP;
+          cellAksi.innerHTML = `
+                <div class="d-flex order-actions gap-2">
+                    <a type="button" class="text-danger bg-light-danger border-0 delete-row"><i class="bx bxs-trash"></i></a>
+                </div>
+            `;
+
+          // Clear form inputs after saving
+          document.getElementById("namaPenerima").value = "";
+          document.getElementById("noHP").value = "";
+
+          // Add event listener to delete button
+          newRow
+            .querySelector(".delete-row")
+            .addEventListener("click", function () {
+              tableListPenerima.deleteRow(newRow.rowIndex - 1);
+              updateRowNumbers();
+            });
+        } else {
+          alert("Semua field harus diisi!");
+        }
+      });
+
+      function updateRowNumbers() {
+        const rows = tableListPenerima.rows;
+        for (let i = 0; i < rows.length; i++) {
+          rows[i].cells[0].textContent = i + 1;
+        }
+      }
+
+      // Attach delete event to existing rows
+      const deleteButtons = document.querySelectorAll(".delete-row");
+      deleteButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const row = button.closest("tr");
+          tableListPenerima.deleteRow(row.rowIndex - 1);
+          updateRowNumbers();
+        });
+      });
+    });
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttonSimpanTembusan = document.getElementById("btnSimpanTembusan");
+    const tableListTembusan = document
+      .getElementById("tableListTembusan")
+      .querySelector("tbody");
+
+    buttonSimpanTembusan.addEventListener("click", function () {
+      const namaTembusan = document.getElementById("namaTembusan").value.trim();
+      const noHPTembusan = document.getElementById("noHPTembusan").value.trim();
+
+      if (namaTembusan && noHPTembusan) {
+        const rowCount = tableListTembusan.rows.length;
+        const newRow = tableListTembusan.insertRow(rowCount);
+
+        const cellNo = newRow.insertCell(0);
+        const cellNamaTembusan = newRow.insertCell(1);
+        const cellNoHPTembusan = newRow.insertCell(2);
+        const cellAksi = newRow.insertCell(3);
+
+        cellNo.textContent = rowCount + 1;
+        cellNamaTembusan.textContent = namaTembusan;
+        cellNoHPTembusan.textContent = noHPTembusan;
+        cellAksi.innerHTML = `
+              <div class="d-flex order-actions gap-2">
+                  <a type="button" class="text-danger bg-light-danger border-0 delete-row"><i class="bx bxs-trash"></i></a>
+              </div>
+          `;
+
+        // Clear form inputs after saving
+        document.getElementById("namaTembusan").value = "";
+        document.getElementById("noHPTembusan").value = "";
+
+        // Add event listener to delete button
+        newRow
+          .querySelector(".delete-row")
+          .addEventListener("click", function () {
+            tableListTembusan.deleteRow(newRow.rowIndex - 1);
+            updateRowNumbers();
+          });
+      } else {
+        alert("Semua field harus diisi!");
+      }
+    });
+
+    function updateRowNumbers() {
+      const rows = tableListTembusan.rows;
+      for (let i = 0; i < rows.length; i++) {
+        rows[i].cells[0].textContent = i + 1;
+      }
+    }
+
+    // Attach delete event to existing rows
+    const deleteButtons = document.querySelectorAll(".delete-row");
+    deleteButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const row = button.closest("tr");
+        tableListTembusan.deleteRow(row.rowIndex - 1);
+        updateRowNumbers();
+      });
+    });
+  });
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--favicon-->
+    <link rel="icon" href="assets/images/index.ico" type="image/png" />
+    <!--plugins-->
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link
+      href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/metismenu/css/metisMenu.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libraries/gijgo/css/gijgo.min.css" />
+    <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link
+      href="assets/plugins/select2/css/select2-bootstrap4.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css"
+      rel="stylesheet"
+    />
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet" />
+    <script src="assets/js/pace.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-extended.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" /> -->
+    <link href="assets/css/app.css" rel="stylesheet" />
+    <link href="assets/css/icons.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="assets/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+
+    <title>Track Your Delivery</title>
+  </head>
+
+  <body>
+    <!--wrapper-->
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+          <div class="sidebar-header">
+            <div>
+              <img
+                src="assets/images/logo_dct_2.png"
+                class="logo-icon"
+                alt="logo icon"
+              />
+            </div>
+            <div>
+              <h4 class="logo-text">Track Your Delivery</h4>
+            </div>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bx bx-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#"
+                  >Cek Pengiriman</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kirim Barang</a>
+              </li>
+            </ul>
+            <!-- <form class="d-flex me-2">
+              <button
+                class="btn btn-outline-primary me-3 radius-8 px-3"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignIn"
+              >
+                Masuk
+              </button>
+              <button
+                class="btn btn-primary radius-8 px-3"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignUp"
+              >
+                Daftar
+              </button>
+            </form> -->
+            <div class="user-box dropdown">
+              <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/images/avatars/nanda.jpg" class="user-img" alt="user avatar">
+                <div class="user-info ps-3">
+                  <p class="user-name mb-0">Nanda Raditya</p>
+                  <p class="designattion mb-0">UI/UX Designer</p>
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+                </li>
+                <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Settings</span></a>
+                </li>
+                
+                  <div class="dropdown-divider mb-0"></div>
+                </li>
+                <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      
+      <div class="p-4">
+        <div class="row">
+          <div class="col-lg-4 d-flex">
+            <div class="card radius-10 w-100">
+              <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center">
+                  <img src="assets/images/avatars/nanda.jpg" alt="profile" class="rounded-circle p-1" width="110">
+                  <div class="mt-3">
+                    <h4>Nanda Raditya</h4>
+                    <p class="text-secondary mb-1">Wisesa Consulting</p>
+                    <p class="text-muted font-size-sm">IT &amp; Application Development</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex">
+            <div class="card radius-10 w-100">
+              <div class="card-body">
+                <div class="row mb-3">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Nama</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" value="Nanda Raditya">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">No KTP</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" value="32047353678889472">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Nomor HP</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" value="081234567890">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Email</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" value="nandaraditya80@gmail.com">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Alamat</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" value="Jalan Mawar nomor 77">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-3"></div>
+                  <div class="col-sm-9 text-secondary">
+                    <button type="button" class="btn btn-primary px-4 radius-8 me-2">Simpan</button>
+                    <button type="button" class="btn btn-outline-secondary px-4 radius-8">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--start overlay-->
+      <div class="overlay toggle-icon"></div>
+      <!--end overlay-->
+      <!--Start Back To Top Button-->
+      <a href="javaScript:;" class="back-to-top"
+        ><i class="bx bxs-up-arrow-alt"></i
+      ></a>
+      <!--End Back To Top Button-->
+
+      <footer class="page-footer bg-white text-black">
+        <p class="mb-0">Copyright © 2024. All right reserved.</p>
+      </footer>
+    </div>
+    <!--end wrapper-->
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--plugins-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+    <script src="assets/plugins/fullcalendar/js/main.min.js"></script>
+    <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+    <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+
+    <!--app JS-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+       $(document).ready(function () {
+        var table = $('#tableListPenerima').DataTable({
+        });
+      });
+
+      $(document).ready(function () {
+        var table = $('#tableListBarang').DataTable({
+        });
+      });
+    </script>
+  </body>
+</html>

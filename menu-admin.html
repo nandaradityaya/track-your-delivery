@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--favicon-->
+    <link rel="icon" href="assets/images/index.ico" type="image/png" />
+    <!--plugins-->
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link
+      href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/metismenu/css/metisMenu.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libraries/gijgo/css/gijgo.min.css">
+    <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="assets/plugins/select2/css/select2-bootstrap4.css" rel="stylesheet" />
+    <link
+      href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css"
+      rel="stylesheet"
+    />
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet" />
+    <script src="assets/js/pace.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-extended.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" /> -->
+    <link href="assets/css/app.css" rel="stylesheet" />
+    <link href="assets/css/icons.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="assets/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+
+    <title>Track Your Delivery</title>
+  </head>
+
+  <body>
+    <!--wrapper-->
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+          <div class="sidebar-header">
+            <div>
+              <img
+                src="assets/images/logo_dct_2.png"
+                class="logo-icon"
+                alt="logo icon"
+              />
+            </div>
+            <div>
+              <h4 class="logo-text">Track Your Delivery</h4>
+            </div>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bx bx-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Cek Pengiriman</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="menu-admin.html">List Pengiriman</a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="list-user-pengirim.html">List User Pengirim</a>
+              </li>
+            </ul>
+            <!-- <form class="d-flex me-2">
+              <button
+                class="btn btn-outline-primary me-3 radius-8 px-3"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignIn"
+              >
+                Masuk
+              </button>
+              <button
+                class="btn btn-primary radius-8 px-3"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignUp"
+              >
+                Daftar
+              </button>
+            </form> -->
+            <div class="user-box dropdown">
+              <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/images/avatars/nanda.jpg" class="user-img" alt="user avatar">
+                <div class="user-info ps-3">
+                  <p class="user-name mb-0">Nanda Raditya</p>
+                  <p class="designattion mb-0">UI/UX Designer</p>
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
+                </li>
+                <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Settings</span></a>
+                </li>
+                
+                  <div class="dropdown-divider mb-0"></div>
+                </li>
+                <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="p-4">
+        <div class="card radius-10">
+          <div class="card-header">
+			<div class="row mb-3">
+				<div class="col-12 col-lg-4">
+					<label for="filerDateAwal" class="form-label">Start Date
+						Created</label>
+					<div class="input-group mb-2">
+						<input type="text" class="form-control" id="startDatePengiriman"
+							placeholder="dd/mm/yyyy">
+					</div>
+				</div>
+				<div class="col-12 col-lg-4">
+					<label for="filerDateAwal" class="form-label">End Date
+						Created</label>
+					<div class="input-group mb-2">
+						<input type="text" class="form-control" id="endDatePengiriman"
+							placeholder="dd/mm/yyyy">
+					</div>
+				</div>
+				<div class="col-12 col-lg-4">
+					<label class="form-label">Status</label>
+					<select class="single-select form-select">
+						<option value="all">All</option>
+						<option value="">New</option>
+						<option value="">Submitted</option>
+						<option value="">Diterima Perantara</option>
+						<option value="">Diterima Target</option>
+						<option value="">Dikonfirmasi Penerima</option>
+					</select>
+				</div>
+			</div>
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn btn-outline-primary radius-8">Apply</button>
+            </div>
+		  </div>
+          <div class="card-body">
+            <div class="d-flex align-items-center">
+				<div>
+					<h5 class="font-weight-bold mb-0">Pengiriman</h5>
+				</div>
+				</div>
+				<div class="table-responsive">
+					<div id="printbar" style="float:right"></div>
+					<br>
+					<table id="tablePengiriman" class="table mb-0 align-middle" style="width:100%">
+						<thead class="table-light">
+							<tr>
+								<th>No</th>
+								<th>Kode Pengiriman</th>
+								<th>Status</th>
+								<th>Nama Pengirim</th>
+								<th>Tanggal Kirim</th>
+								<th>Nama Penerima</th>
+								<th>Tanggal Terima</th>
+								<th>View Detail</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>TYD1701202301</td>
+								<td><div class="badge rounded-pill text-info bg-light-info p-2 text-uppercase px-3">
+									New</div></td>
+								<td>Iqbal</td>
+								<td>15 Jan 2024 13:30</td>
+								<td>Robby Aditama</td>
+								<td>18 Jan 2024 16:30</td>
+								
+								<td><a href="detail-barang-admin.html" type="button" class="btn btn-primary btn-sm radius-30 px-4">View Detail</a></td>
+								
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>TYD1701202302</td>
+								<td><div class="badge rounded-pill text-warning bg-light-warning p-2 text-uppercase px-3">
+									Diterima Perantara <span>(Faber)</span></div></td>
+								<td>Iqbal</td>
+								<td>15 Jan 2024 12:30</td>
+								<td>Jovian</td>
+								<td>18 Jan 2024 17:30</td>
+								
+								<td><a href="detail-barang-admin.html" type="button" class="btn btn-primary btn-sm radius-30 px-4">View Detail</a></td>
+								
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>TYD17012023013</td>
+								<td><div class="badge rounded-pill text-primary bg-light-primary p-2 text-uppercase px-3">
+									Disubmit Pengirim <span>(Iqbal)</span></div></td>
+								<td>Iqbal</td>
+								<td>15 Jan 2024 11:30</td>
+								<td>Ibnu</td>
+								<td>-</td>
+								
+								<td><a href="detail-barang-admin.html" type="button" class="btn btn-primary btn-sm radius-30 px-4">View Detail</a></td>
+								
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>TYD17012023013</td>
+								<td><div class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+									Diterima Target <span>(Iqbal)</span></div></td>
+								<td>Iqbal</td>
+								<td>15 Jan 2024 11:30</td>
+								<td>Ibnu</td>
+								<td>15 Jan 2024 11:30</td>
+								
+								<td><a href="detail-barang-admin.html" type="button" class="btn btn-primary btn-sm radius-30 px-4">View Detail</a></td>
+								
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>TYD17012023013</td>
+								<td><div class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+									Dikonfirmasi Penerima <span>(Iqbal)</span></div></td>
+								<td>Iqbal</td>
+								<td>15 Jan 2024 11:30</td>
+								<td>Ibnu</td>
+								<td>15 Jan 2024 11:30</td>
+								
+								<td><a href="detail-barang-admin.html" type="button" class="btn btn-primary btn-sm radius-30 px-4">View Detail</a></td>
+								
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>TYD17012023013</td>
+								<td><div class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3">
+									Submitted</div></td>
+								<td>Iqbal</td>
+								<td>15 Jan 2024 11:30</td>
+								<td>Ibnu</td>
+								<td>15 Jan 2024 11:30</td>
+								
+								<td><a href="detail-barang-admin.html" type="button" class="btn btn-primary btn-sm radius-30 px-4">View Detail</a></td>
+								
+							</tr>
+						</tbody>
+					</table>
+				</div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Modal Box Submit -->
+				<div class="modal fade" id="modalSubmit" tabindex="-1" aria-labelledby="modalSubmitLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content radius-10">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalSubmitLabel">Submit Data</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								Are you sure want to Submit this data?
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary radius-8"
+									data-bs-dismiss="modal">Cancel</button>
+								<button type="button" class="btn btn-success radius-8">Submit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+      <!-- Modal Box Delete -->
+				<div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="modalDeleteLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content radius-10">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalDeleteLabel">Delete Data</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								Are you sure want to delete this data?
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary radius-8"
+									data-bs-dismiss="modal">Cancel</button>
+								<button type="button" class="btn btn-danger radius-8">Delete</button>
+							</div>
+						</div>
+					</div>
+				</div>
+      <!--start overlay-->
+      <div class="overlay toggle-icon"></div>
+      <!--end overlay-->
+      <!--Start Back To Top Button-->
+      <a href="javaScript:;" class="back-to-top"
+        ><i class="bx bxs-up-arrow-alt"></i
+      ></a>
+      <!--End Back To Top Button-->
+
+      <footer class="page-footer bg-white text-black">
+        <p class="mb-0">Copyright © 2024. All right reserved.</p>
+      </footer>
+    </div>
+    <!--end wrapper-->
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--plugins-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+    <script src="assets/plugins/fullcalendar/js/main.min.js"></script>
+    <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <script src="assets/libraries/gijgo/js/gijgo.min.js"></script>
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+    <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+
+    <!--app JS-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+
+      $(document).ready(function () {
+			var table = $('#tablePengiriman').DataTable({
+				dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
+				// dom: 'Bfrtip',
+				buttons: ['copy', 'csv','excel', 'pdf'
+				],
+			});
+
+			table.buttons().container()
+				.appendTo('#tableUser_wrapper .col-md-6:eq(0)');
+		});
+    </script>
+
+  </body>
+</html>
